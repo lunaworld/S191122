@@ -20,10 +20,83 @@ div {
 .span4 {
     background: yellow;
 } */
-.spanxxx {
 
+a {
+    color: black;
+    text-decoration: none;
+}
+#block1 {
+    background: url('logo.png');
+    padding-top: 145px;
+    padding-bottom: 145px;
+    text-align: center;
+
+    /* trường hợp hình dùng làm background quá nhỏ hoặc quá lớn hoặc kích thước ko chuẩn
+    mình có thể dùng 3 thuộc tính bên dưới để chỉnh lại */
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: -71px 85px;
+}
+/* #block1:hover {
+    background: red;
+} */
+.link-btn {
+    border: 1px solid white;
+    padding: 8px 25px;
+    /* font-size: kích thước chữ
+    font-weight: độ đậm nhạt */
+    font-size: 16px;  
+    font-weight: 700;
 }
 
-#block1 {
-    background: url('background1.jpeg');
+.link-btn:hover {
+    background: rgb(96, 205, 233);
+}
+#nav {
+    padding-top: 5px;
+    padding-bottom:5px;
+    background: black;
+}
+#nav div{
+    display: inline;
+    padding: 5px 10px;  
+    font-size: 20px;
+}
+
+/* cách bắt từ element cha vô các element con */
+#nav div span{
+    color:white;
+}
+#nav div span:hover{
+    color:rgb(245, 22, 59);
+}
+
+#btn1 {
+    background: transparent;
+    /* transition: chuyển động liên tục có 3 tham số
+    all là thuộc tính cần chuyển động, 3s là thòi gian, linear là cách thức chuyển động*/
+    transition:all 3s linear;
+}
+
+#about-text {
+    text-align: center;
+}
+
+#btn1:hover {
+    background: blue;
+    font-size: 50px;
+    padding:10px 40px;
+}
+/* cách đề chia các element trên 1 hàng */
+
+/* grid là cách thể hiện dạng lưới
+dùng để chia layout rất hiệu quả
+để dùng các thuộc tính grid thì đầu tiên phải cho các div con vô 1 div cha
+cho div cha thuộc tính display grid, rồi dùng grid-template-columns để chia số cột  */
+
+#about-property {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    width: 80%;
+    margin:auto;
 }
