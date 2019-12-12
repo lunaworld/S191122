@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pofolio</title>
+    <style>
+        /* selector {
+            tên thuộc tính: giá trị của thuộc tính;
+            tên thuộc tính 2: giá trị của thuộc tính 2;
+        } */
+        /* body { */
+            /* background là nền của đối tượng
+            có thể là màu sắc hoặc hình ảnh */
+            /* background: red;
+        }
+        header {
+            background: yellow;
+        }
+        div {
+            background: green;
+        } */
+        #div1{
+            background: url('kitchen5.jpg') ;
+            /* height là độ cao của element áp dụng cho hầu hết các element trong html
+            như div, img, input
+            width là bề ngang của element áp dụng cho hầu hết các element trong html
+            như div, img, input */
+
+            /* các đơn vị
+            px: số điểm ảnh
+            %: tính theo % kích thước của đối tượng cha
+            vw: view width: kích thước màn hình bề ngang
+            vh: view height: kích thước bề dọc của màn hình */
+
+            background: url(kitchen5.jpg);
+            height: 55vh;
+            width: 100%;
+            padding: 45vh 0px 0px 0px;
+            text-align: center;
+        }
+        .menu-item {
+            /* display:block; */
+            /* display: thể hiện 
+            + block : xuống hàng
+            + inline: trên 1 hàng
+            xuống hàng hay trên 1 hàng so với thằng đứng trước nó
+            ngoài ra thì còn có
+            + inline-block
+            + grid : thể hiện dạng lưới
+            + flex :  */
+            display: inline;
+
+            /* dùng margin nếu muốn là khoảng cách giữa 2 div
+            dùng padding nếu muốn nó là khoảng cách từ border vào content */
+            margin: 0px 20px;
+           /* padding: 0px 20px; */
+        }
+
+        .menu-container {
+            background: #1B242F;
+            padding: 20px;  
+        }
+
+        .menu-item a{
+            /* // select tất cả thẻ a là con của thẻ có class là menu-item */
+            /* //color màu chữ */
+            color:white;
+
+            /* //font-size: kích thước chữ
+            đơn vị : px, %, em, rm, */
+            font-size: 18px;
+            text-decoration: none;
+            
+            /* //sử dụng trong trường hợp muốn click bên ngoài vẫn chuyển link */
+            /* padding: 0px 20px; */
+
+
+            /* //transition cho phép chuyển động mượt mà liên tục
+            cú pháp :
+            transition: [thuộc tính] [thời gian] [kiểu chuyển động];
+            có thể khai báo riêng cho từng thuộc tính
+            nếu khai báo transition thuộc tính là all thì nó sẽ ảnh hưởng tất cả
+            thuộc tính thay đổi 
+            lưu ý: nếu 1 thuộc tính được khai báo nhiều lần thì thuộc tính sau sẽ ghi đè
+            lên vd như padding :  = padding top + padding right + padding-bottom + padding-left
+            */
+            transition: color 1s linear;
+            transition: font-size 5s linear;
+            transition: all 1s linear;
+            
+        }
+        .menu-item a:hover{
+            font-size: 50px;
+            color:rgb(187, 28, 107);
+        }
+    </style>
+</head>
+<body>
+        
+    <header>
+        <div id="div1">
+            <div>
+                <h1 style="color:brown">HELLO IM LUAN <br>
+                IM A WEB DEVElOPER</h1>
+            </div>
+            <div></div>
+        </div>
+        <div class = 'menu-container'>
+            <div class = 'menu-item'><a href='http://google.com'>Porfolio</a></div>
+            <div class = 'menu-item'><a href='#jump1'>Home</a></div>
+            <div class = 'menu-item'><a href='#jump1'>About</a></div>
+            <div class = 'menu-item'><a href='#jump1'>Blog</a></div>
+            <div class = 'menu-item'><a href='#jump1'>Contact</a></div>
+        </div>
+    </header>  
+    <div>
+
+    </div>
+    <footer>
+
+    </footer>
+</body>
+</html>
