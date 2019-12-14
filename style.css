@@ -100,3 +100,52 @@ cho div cha thuộc tính display grid, rồi dùng grid-template-columns để 
     width: 80%;
     margin:auto;
 }
+
+.card1{
+    width: 80%;
+    margin:auto;
+}
+
+.card1-div1{
+    width: 40%;
+    margin:auto;
+}
+.card1-div1 img{
+    width: 100%;
+}
+.card1-div2 , .card1-div3 {
+    text-align: center;
+}
+
+#block2-info {
+    display:grid;
+    grid-template-columns: 50% 50%;
+    width: 80%;
+    margin:auto;
+    margin-top: 60px;
+}
+
+.skill-info {
+    display: grid;
+    margin-bottom: 10px;
+    
+}
+.skill-info div:nth-child(1) {
+background: green;
+}
+.skill-info div:nth-child(2) {
+    background: red;
+}
+.skill-info div:nth-child(3) {
+    background: yellow;
+}
+
+#skill-info-row1 {
+    grid-template-columns: 20% 60% 20%;
+}
+#skill-info-row2 {
+    grid-template-columns: 20% 68% 12%;
+}
+#skill-info-row3 {
+    grid-template-columns: 20% 55% 25%;
+}
