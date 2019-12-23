@@ -91,9 +91,159 @@
             transition: all 1s linear;
             
         }
+        /* //hover tức là khi trỏ chuột vào phần tử đó sẽ kích hoạt những css này */
         .menu-item a:hover{
             font-size: 50px;
             color:rgb(187, 28, 107);
+        }
+
+        .text-center {
+            /* //cho text vào giữa  */
+            text-align: center;
+        }
+        .property {
+            /* grid: thể hiện dạng lưới 
+            để sử dụng những thuộc tính grid : bạn phải có display: grid;
+            chi tiết -> search google */
+            display: grid;
+            grid-template-columns: 25% 25% 25% 25%;
+            /* margin bottom: khoảng cách với phần tử dưới nó */
+            margin-bottom: 80px; 
+        }
+
+        #main {
+            width: 85%;
+            /* //margin: auto -> tự động canh giữa */
+            margin:auto;
+        }
+        .card1 {
+            width: 80%;
+            margin:auto;
+        }
+        .card1-div2 , .card1-div3{
+            text-align: center;
+        }
+        .card1-div1 {
+            width: 40%;
+            margin:auto;
+        }
+        
+        /* //để cho dễ chia layout tốt nhất nên bọc img vào 1 thẻ div 
+        cho kích thước thẻ img = 100% để kích thước luôn luôn bằng kích thước thẻ div
+        sau đó chỉnh kích thước thẻ div bên ngoài thì kích thước img sẽ thay đổi theo */
+        .card1-div1 img{
+            /* //select tất cả thẻ img con của thẻ có class là .card1-div1  */
+            width: 100%;
+        }
+
+        .skill-info {
+            display: grid;
+            grid-template-columns: 50% 50%;
+        }
+        .width80{
+            width: 80%;
+        }
+
+        .skill-info-bar {
+            display: grid;
+            margin-bottom: 30px;
+        }
+        /* truy xuất đến thẻ div con của thẻ có class .skill-info-bar và là con thứ n trong :nth-child(n) */
+        .skill-info-bar div:nth-child(1){
+            background: red;
+            text-align: center;
+            color: white;
+        }
+        .skill-info-bar div:nth-child(2){
+            background: green;
+        }
+        .skill-info-bar div:nth-child(3){
+            background: yellow;
+            text-align: right;
+        }
+        #skill1{
+            grid-template-columns: 20% 60% 20%;
+        }
+        #skill2{
+            grid-template-columns: 20% 55% 25%;
+        }
+        #skill3{
+            grid-template-columns: 20% 70% 10%;
+        }
+        #skill4{
+            grid-template-columns: 20% 50% 30%;
+        }
+
+        #project {
+            padding-top:80px;
+            padding-bottom: 80px;
+            background: darkgrey;
+        }
+        .project-div1 h1 {
+            text-align: center;
+        }
+        .project-div2 {
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            width: 60%;
+            margin:auto;
+        }
+        
+
+        .project-div2 div {
+            padding:5px;
+            text-align: center;
+        }
+
+        .project-div2 div:hover {
+            background: pink;
+        }
+
+        .project-div3 {
+            display: grid;
+            grid-template-columns: 33.3% 33.3% 33.3%;
+        }
+
+        .card-hover-eff{
+            /* //postion: thuộc tính vị trí. mặc định ko set sẽ có giá trị là static
+            //postion absolute phải đi kèm với cha là position relative */
+            position: relative;
+        }
+        .card-hover-eff-img img{
+            width: 100%;
+        }
+        .card-hover-eff-textup {
+            /* //postion: thuộc tính vị trí. mặc định ko set sẽ có giá trị là static
+            //postion absolute phải đi kèm với cha là position relative
+            //position absolute kết hợp với cha relative cho phép set vị trí
+            của element theo vị trí bất kì đi theo 4 giá trị top, left, bottom,right
+            của element cha 
+            */
+            position: absolute;
+            top:0px;
+            left: 40%;
+            transition: all 1s linear;
+            opacity: 0;
+        }
+        .card-hover-eff-textdown {
+            position: absolute;
+            bottom:0px;
+            left: 34%;
+            /* opacity : độ trong suốt của element có các giá trị từ 0 đến 1
+            0 tương đương với trong suốt hoàn toàn
+            1 tương đương với không trong suốt */
+            opacity: 0;
+            transition: all 1s linear;
+        }
+
+        .card-hover-eff:hover .card-hover-eff-textup{
+            top:25%;
+            opacity: 1;
+        }
+
+        .card-hover-eff:hover .card-hover-eff-textdown{
+            bottom:25%;
+            opacity: 1;
         }
     </style>
 </head>
@@ -115,8 +265,106 @@
             <div class = 'menu-item'><a href='#jump1'>Contact</a></div>
         </div>
     </header>  
-    <div>
-        
+    <div id ='main'>
+        <div id = 'about'>
+            <div class = 'text-center'>
+                <h1>About</h1>
+            </div>
+            <div class = 'property'>
+                <div class = 'card1'>
+                    <!-- //duong dan tuong doi: search google -->
+                    <div class ="card1-div1"><img src = "images/icon1.png"></div>
+                    <div class ="card1-div2"><h3>Fast</h3></div>
+                    <div class ="card1-div3">Fast load times and lag free interaction, my highest priority</div>
+                </div>
+                <div class = 'card1'>
+                    <!-- //duong dan tuong doi: search google -->
+                    <div class ="card1-div1"><img src = "images/icon1.png"></div>
+                    <div class ="card1-div2"><h3>Reponsive</h3></div>
+                    <div class ="card1-div3">My layouts will work on any device, big or small.</div>
+                </div>
+                <div class = 'card1'>
+                    <!-- //duong dan tuong doi: search google -->
+                    <div class ="card1-div1"><img src = "images/icon1.png"></div>
+                    <div class ="card1-div2"><h3>Fast</h3></div>
+                    <div class ="card1-div3">Fast load times and lag free interaction, my highest priority</div>
+                </div>
+                <div class = 'card1'>
+                    <!-- //duong dan tuong doi: search google -->
+                    <div class ="card1-div1"><img src = "images/icon1.png"></div>
+                    <div class ="card1-div2"><h3>Fast</h3></div>
+                    <div class ="card1-div3">Fast load times and lag free interaction, my highest priority</div>
+                </div>
+            </div>
+            <div class = 'skill-info'>
+                <div>
+                    <div class = 'card1'>
+                        <!-- //duong dan tuong doi: search google -->
+                        <div class ="card1-div1 width80"><img src = "images/me.png"></div>
+                        <div class ="card1-div2"><h3>Who's this guy?</h3></div>
+                        <div class ="card1-div3">I'm the Front-End Developer for EyeCue Lab in Portland, OR.
+                            I have serious passion for UI effects, animations and creating intuitive, dynamic user experiences.
+                            Let's make something special.</div>
+                    </div>
+                </div>
+                <div>
+                    <div class = 'skill-info-bar' id ='skill1'>
+                        <div>   CSS </div>
+                        <div></div>
+                        <div>80%</div>
+                    </div>
+
+                    <div class = 'skill-info-bar' id ='skill2'>
+                        <div>   JS </div>
+                        <div></div>
+                        <div>70%</div>
+                    </div>
+                    <div class = 'skill-info-bar' id ='skill3'>
+                        <div>   HTML </div>
+                        <div></div>
+                        <div>90%</div>
+                    </div>
+                    <div class = 'skill-info-bar' id ='skill4'>
+                        <div>   PHP </div>
+                        <div></div>
+                        <div>60%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id = "project">
+            <div class = 'project-div1'>
+                <h1>PROJECT</h1>
+            </div>
+            <div class = 'project-div2'>
+                <div>Node JS</div>
+                <div> JS</div>
+                <div>Ruby</div>
+                <div>Php</div>
+            </div>
+            <div class = 'project-div3'>
+               <div class = 'card-hover-eff'>
+                    <div class = 'card-hover-eff-img'>
+                        <img src = 'images/div1.png'>
+                    </div>
+                    <div class = 'card-hover-eff-textup'>
+                        JS <br>
+                        Java Script
+                    </div>
+                    <div class = 'card-hover-eff-textdown'>                       
+                        <a href="#">Learning More</a>
+                    </div>
+
+               </div>
+               <div>
+
+               </div>
+               <div>
+
+               </div>
+            </div>
+        </div>
     </div>
     <footer>
 
