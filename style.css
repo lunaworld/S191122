@@ -149,3 +149,102 @@ background: green;
 #skill-info-row3 {
     grid-template-columns: 20% 55% 25%;
 }
+
+#block3 {
+    background: gray;
+    padding-top: 60px;
+}
+
+.project-menu {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    width: 70%;
+    margin: auto;
+}
+
+.project-menu button {
+    background: none;
+    border: none;
+}
+
+.project-content{
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    width: 85%;
+    margin: auto;
+    
+}
+
+.card2-div1 img {
+    width:100%;
+}
+
+
+.card2{
+    position: relative;
+}
+.card2-div2 , .card2-div3 {
+    /* display: none; */
+    opacity: 0;
+    position: absolute;
+    transition: all 1s linear;
+}
+.card2-div2 {
+    top:0px;
+    right: 30%;
+}
+.card2-div3 {
+    bottom: 0px;
+    right: 40%;
+}
+
+
+
+.card2:hover .card2-div2 {
+    /* display: block; */
+    top: 80px;
+    opacity: 1;
+}
+.card2:hover .card2-div3 {
+    /* display: block; */
+    bottom:80px;
+    opacity: 1;
+}
+.headline {
+    text-align: center;
+}
+
+#block4 {
+    padding-top: 80px;
+}
+.block4-content {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    width: 85%;
+    margin: auto;
+}
+
+.card3-div1 img {
+    width: 100%;
+}
+
+.card3-div3 {
+    padding-bottom: 30px;
+}
+
+.card3-div3 span {
+    padding-bottom: 20px;
+    border-bottom: 5px blue solid;
+}
+
+.card3-div2 h3 {
+    color: green;
+}
+.card3:hover .card3-div2 h3{
+    color: red;
+}
+
+.skill-info-bar{
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+}
